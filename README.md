@@ -2,7 +2,10 @@
 
 Repository associated with our IEEE T-ASE journal submission.
 
-## Synthetic Static Environment
+
+https://github.com/user-attachments/assets/4333c450-b1d0-47e8-9003-1ad484f856b8
+
+
 ***Step 0*** Create two folders *data* and *stats* (in the root directory) with the following directory structure:
 1. data
    - static
@@ -22,6 +25,8 @@ Repository associated with our IEEE T-ASE journal submission.
      - inlane_cut_in_low
      - inlane_cut_in_high
      - lane_change
+
+## Synthetic Static Environment
 
 ***Step 1*** To configure the obstacle scenarios and to modify the parameters associated with different distributions you need to edit ```obs_data_generate_static.py```.
 Specifically, the functions ```compute_noisy_init_state_gaussian, compute_noisy_init_state_bimodal, compute_noisy_init_state_trimodal``` contain the parameters associated with different distributions.
