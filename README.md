@@ -61,7 +61,7 @@ python3 plot_trajectories_snapshot.py --num_obs <int> --num_reduced_set <int> --
 ```
 (C) To generate videos for the trajectories run the following command:
 ```
-python3 plot_trajectories_video.py --num_obs 2 --num_reduced_set 5 --num_exps 1 --noises gaussian bimodal trimodal --costs mmd_opt cvar
+python3 plot_trajectories_video.py --num_obs <int> --num_reduced_set <int> --num_exps <int> --noises <one or all of gaussian, bimodal, trimodal> --costs <one or all of mmd_opt, cvar, saa>
 ```
 
 
