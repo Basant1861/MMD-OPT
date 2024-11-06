@@ -44,3 +44,24 @@ where *costs* can be one or all of <**mmd_opt**, **cvar**, **saa**> and *noises*
 python3 validation_static.py  --num_obs <from Step 2 > --num_reduced_set <from Step 2 > --noises <from Step 2>  --num_exps <from Step 2 >
 ```
 This will store the statisitics in the corresponding locations in the *stats* folder
+
+***Step 4*** 
+
+(A) Next we plot the box plots as well as visualize the trajectories. To plot the box plots go to the folder *plots_journal_static* and run the following command:
+```
+python3 plot_box_plots.py --num_obs <int> --num_reduced_set <from Step 2 > --noises <from Step 2 >
+```
+**Note:** 
+1. The above command takes in a single integer value for *num_obs*. To plot the box plots for different number of obstacles you need to run the above command separately for each value of *num_obs*.
+2. Currently, *plot_box_plots.py* generates box plots for all three costs, i.e, *mmd_opt, saa, cvar*. In order to plot the box plots for a subset of these costs you need to uncomment/edit the lines corresponding to the costs that you do not want to plot the box plots for.
+
+(B) To plot the trajectories with snapshots of different timesteps run the following command from inside the folder *plots_journal_static*:
+```
+python3 plot_trajectories_snapshot.py --num_obs <int> --num_reduced_set <int> --num_exps <int> --noises <one or all of gaussian, bimodal, trimodal> --costs <one or all of mmd_opt, cvar, saa>
+```
+(C) To generate videos for the trajectories run the following command:
+```
+python3 plot_trajectories_video.py --num_obs 2 --num_reduced_set 5 --num_exps 1 --noises gaussian bimodal trimodal --costs mmd_opt cvar
+```
+
+
