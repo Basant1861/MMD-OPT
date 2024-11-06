@@ -133,7 +133,7 @@ class obs_data():
 
         x_obs_init = jax.random.choice(jax.random.PRNGKey(seed),jnp.linspace(30,60,30), (num_obs, ),replace=False)
         y_obs_init = jax.random.choice(jax.random.PRNGKey(seed),jnp.array([-1.75,1.75]),(num_obs,))
-        # y_obs_init = jnp.array([1.75])
+        # y_obs_init = 1.75*jnp.ones(num_obs)
 
         vx_obs_init = jax.random.choice(jax.random.PRNGKey(seed),jnp.linspace(0.5,7,15), (num_obs, ),replace = False)
         vy_obs_init = jnp.zeros(num_obs)
