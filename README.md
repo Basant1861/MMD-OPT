@@ -37,4 +37,10 @@ In order to modify the initial obstacle positions you need to modify the functio
 python3 main_mpc_static.py --num_exps <int> --num_reduced_set <list of ints> --num_obs <list of ints>
 --costs <list of str> --noises <list of str>
 ```
-where *costs* can be one or all of <**mmd_opt**, **cvar**, **saa**> and *noises* can be one or all of <**gaussian**, **bimodal**, **trimodal**>
+where *costs* can be one or all of <**mmd_opt**, **cvar**, **saa**> and *noises* can be one or all of <**gaussian**, **bimodal**, **trimodal**>. The above command will run given number of experiments for default 200 obstacle configurations. This number can be changed by modifying *num_configs* variable in ```main_mpc_static.py```
+
+***Step 3*** Once *Step 2* is complete, there will be data files in the corresponding folders in *data-> static-> gaussian,bimodal,trimodal*. Now we need to calculate the statistics for the collected data. Run the following command from the root directory:
+```
+python3 validation_static.py  --num_obs <from Step 2 > --num_reduced_set <from Step 2 > --noises <from Step 2>  --num_exps <from Step 2 >
+```
+This will store the statisitics in the corresponding locations in the *stats* folder
