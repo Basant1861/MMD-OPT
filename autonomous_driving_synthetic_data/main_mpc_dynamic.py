@@ -52,7 +52,7 @@ def main():
     cov_param = np.asarray(np.diag(diag_param)) 
     
     num_mother = 100
-    num_configs = 10
+    num_configs = 200
     
     for setting in list_settings:
         if setting=="inlane_cut_in_low":

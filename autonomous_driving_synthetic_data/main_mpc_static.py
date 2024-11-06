@@ -53,7 +53,7 @@ def main():
     cov_param = np.asarray(np.diag(diag_param)) 
     
     num_mother = 100
-    num_configs = 10
+    num_configs = 200
 
     for noise in list_noises:
         if noise == "gaussian":
