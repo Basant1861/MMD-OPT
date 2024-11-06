@@ -1,0 +1,34 @@
+
+Main files
+
+python3 main_mpc_dynamic.py --num_ exps 20 --num_reduced_set 5 25 --num_obs 1 2 --costs mmd_opt cvar saa --setting inlane_cut_in_low inlane_cut_in_high lane_change
+
+python3 main_mpc_static.py --num_exps 20 --num_reduced_set 5 25 --num_obs 2 3 --costs cvar mmd_opt saa --noises gaussian bimodal trimodal
+
+-----------------------------------------------------------------
+
+Validation files
+
+python3 validation_static.py  --num_obs 2 3 --num_reduced_set 5 25 --noises gaussian bimodal trimodal --num_exps 20
+
+python3 validation_dynamic.py  --num_obs 1 2 --num_reduced_set 5 25 --num_exps 20
+
+-----------------------------------------------------------------
+
+Box plots, Traj plots - Dynamic
+
+python3 plot_box_plots.py --num_obs 2 --num_reduced_set 5 25 --setting lane_change inlane_cut_in_high
+
+python3 plot_trajectories_snapshot.py --num_obs 2 --num_reduced_set 5 --num_exps 1 --setting lane_change inlane_cut_in_low --costs mmd_opt cvar
+
+python3 plot_trajectories_video.py --num_obs 2 --num_reduced_set 5 --num_exps 1 --setting lane_change inlane_cut_in_low --costs mmd_opt cvar
+
+------------------------------------------------------------------
+
+Box plots, Traj plots - Static
+
+python3 plot_box_plots.py --num_obs 2 --num_reduced_set 5 25 --noises gaussian bimodal trimodal
+
+python3 plot_trajectories_snapshot.py --num_obs 2 --num_reduced_set 5 --num_exps 1 --noises gaussian bimodal trimodal --costs mmd_opt cvar
+
+python3 plot_trajectories_video.py --num_obs 2 --num_reduced_set 5 --num_exps 1 --noises gaussian bimodal trimodal --costs mmd_opt cvar
