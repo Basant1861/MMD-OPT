@@ -20,7 +20,7 @@ conda activate mmd_opt
 pip install -r requirements.txt
 ```
 
-***Step 0*** Create two folders *data* and *stats* (in the root directory) with the following directory structure:
+***Step 0*** Create two folders *data* and *stats* (in the *autonomous_driving_synthetic_data* directory, henceforth called the **root**) with the following directory structure:
 1. data
    - static
      - gaussian
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 ## Synthetic Static Environment
 
-***Step 1*** To configure the obstacle scenarios and to modify the parameters associated with different distributions you need to edit ```obs_data_generate_static.py```.
+***Step 1*** To configure the obstacle scenarios and to modify the parameters associated with different distributions you need to edit ```obs_data_generate_static.py``` inside the folder *autonomous_driving_synthetic_data*.
 Specifically, the functions ```compute_noisy_init_state_gaussian, compute_noisy_init_state_bimodal, compute_noisy_init_state_trimodal``` contain the parameters associated with different distributions.
 In order to modify the initial obstacle positions you need to modify the function ```compute_obs_data```.
 
