@@ -12,6 +12,13 @@ https://github.com/user-attachments/assets/4333c450-b1d0-47e8-9003-1ad484f856b8
 git clone https://github.com/Basant1861/MMD-OPT.git
 cd MMD-OPT
 ```
+2. Create a conda environment and install the dependencies:
+
+```
+conda create -n mmd_opt python=3.8
+conda activate mmd_opt
+pip install -r requirements.txt
+```
 
 ***Step 0*** Create two folders *data* and *stats* (in the root directory) with the following directory structure:
 1. data
