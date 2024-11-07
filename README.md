@@ -5,6 +5,13 @@ Repository associated with our IEEE T-ASE journal submission.
 
 https://github.com/user-attachments/assets/4333c450-b1d0-47e8-9003-1ad484f856b8
 
+## Getting Started
+
+1. Clone this repository:
+```
+git clone https://github.com/arunkumar-singh/RKHS_Stochastic_Traj_Opt.git
+cd RKHS_Stochastic_Traj_Opt
+```
 
 ***Step 0*** Create two folders *data* and *stats* (in the root directory) with the following directory structure:
 1. data
